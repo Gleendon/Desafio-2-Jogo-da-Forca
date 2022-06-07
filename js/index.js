@@ -130,7 +130,7 @@ function addLetraCerta(letraAcionada){
     }
 }
 
-//Letras erradas
+//Armazenar Letras erradas
 function addLetraErrada(letraAcionada){
     let letraErrada = document.createElement("span");
     letraErrada.setAttribute("id", "letraErr")
