@@ -1,6 +1,6 @@
 //Variáveis
 let letrasTeclado =['A', 'B', 'Ç','C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'W', 'Z']
-let bancoPalavras= ["CASA", "VERDE", "VIAJAR", "PRATOS", "AMOR", "MONTANHA", "PEDRA", "MULHER", "VIAJAR", "BRANCO", "LOUCO", "LARANJA", "MACACO", "NAVIO", "PRAIA", "AREIA", "FLORES"]
+let bancoPalavras= ["CASA", "VERDE", "VIAJAR", "PRATOS", "AMOR", "MONTANHA", "PEDRA", "MULHER", "VIAJAR", "BRANCO", "LOUCO", "LARANJA", "MACACO", "NARIZ", "PRAIA", "AREIA", "FLORES"]
 var boneco = document.querySelector(".boneco")
 let testeTelaJogar = false
 let testeAcertou = false
