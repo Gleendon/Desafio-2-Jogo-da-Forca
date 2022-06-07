@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <header>
+        <h1><img src="img/logo-alura.svg" alt="Logo da Alura, letra A com a cor azul."></h1>
+    </header>
+
+    <main>
+        <section class="secao-inicial">   
+            <button class="comecar" onclick="comecar()" id="comecar">Começar a Jogar</button>
+            <button class="adicionar" onclick="adicionarPalavra()" id="adicionar">Adicionar Palavra</button>
+        </section>
+
+        <section class="secao-invisivel">
+            <div>
+                <textarea name="novaPalavra" id="novaPalavra" class="novaPalavra" placeholder="Adicionar uma nova palavra..."></textarea>
+            </div>
+            <div class="msg-alerta">
+                <img src="img/alert.png" alt="">
+                <p>Max. de 8 letras</p>
+            </div>
+            <div>
+                <button class="salvarPalavra" onclick="salvarPalavra()" id="salvarPalavra">Salvar e Começar</button>
+                <button class="cancelar" onclick="cancelar()" id="cancelar">Cancelar</button>
+            </div>
+        </section>
+
+        <section class="secao-jogar-invisivel">
+            <div class="secao-forca">
+                <img src="img/boneco/boneco1.png" alt="" class="boneco">
+            </div>
+           
+            <div class="secao-palavra-certa">
+            </div>
+                
+            <div class="palavras-erradas">
+            </div>
+            
+            <div>
+                <button class="novoJogo" onclick="novoJogo()" id="novoJogo">Novo Jogo</button>
+                <button class="desistir" onclick="desistir()" id="desistir">Desistir</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Denvolvido por <a href="https://github.com/Gleendon" target="_blank">Gleendon</a></p>
+        <p>Desafio 2 - Alura Challenges</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

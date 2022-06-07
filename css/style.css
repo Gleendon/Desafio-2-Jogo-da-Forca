@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body{
+    background-color: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    margin-left: 50px;
+    padding: 15px 0;   
+}
+
+.secao-inicial{
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+
+.comecar{
+    width: 317px;
+    height: 105px;
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+.adicionar{
+    width: 317px;
+    height: 105px;
+    background-color: #F3F5FC;
+    color: #0A3871
+}
+
+.cancelar, .desistir{
+    width: 332px;
+    height: 67px;
+    background-color: #F3F5FC;
+    color: #0A3871
+}
+
+.salvarPalavra, .novoJogo{
+    width: 332px;
+    height: 67px;
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+.adicionar, .comecar, .cancelar, .salvarPalavra, .novoJogo, .desistir{
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    margin: 17px;
+}
+
+.secao-adicionar{
+    text-align: center;
+}
+
+.novaPalavra{
+    resize: none;
+    border: none;
+    width: 664px;
+    height: 415px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    display: inline-block;
+    font-size: 32px;
+    color: #0A3871;
+    background-color: #F3F5FC;
+}
+
+.novaPalavra:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+} 
+
+.msg-alerta{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.secao-jogar{
+    text-align: center;
+}
+
+.secao-forca{
+    margin: 0 auto;
+    width: 600px;
+    height: 400px;
+}
+
+.secao-palavra-certa{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.palavras-erradas{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.palavras-certas{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-bottom: 3px solid #0A3871;
+    width: 75px;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+footer{
+    text-align: center;
+    padding: 20px 0;
+    background-color: #0A3871;
+    color: white;
+    width: 100%;
+    position:fixed;
+    bottom: 0;
+}   
+
+footer a{
+    color: white;
+}
+
+.secao-invisivel, .invisivel, .secao-jogar-invisivel{
+    display: none;
+}
+
+@media screen and (max-width: 768px){
+
+    main{
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 375px){
+    
+    main{
+        margin: 0 auto;
+    }
+
+}
