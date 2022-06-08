@@ -58,6 +58,8 @@ function removerLinhas(){
         qtdLetra.remove()
     }
 
+    console.log(letrasErrada.length)
+
     if(letrasErrada.length > 0){
         for(var i = 0; i < letrasErrada.length; i++){
             var letraErr = document.querySelector(`#letraErr`);
@@ -79,8 +81,6 @@ function desenharBoneco(erro){
 window.addEventListener("keydown", function (event) {
     let letraAcionada = event.key.toUpperCase()
 
-    console.log(testeAcertou)
-
     if(testeAcertou){
         console.log("Você ganhou!")
     }else{
@@ -97,6 +97,7 @@ window.addEventListener("keydown", function (event) {
                     addLetraErrada(letraAcionada);
                     desenharBoneco(erro)
                 }else if (erro == vida){
+                    addLetraErrada(letraAcionada)
                     desenharBoneco(7)            
                 }       
             }
@@ -110,8 +111,6 @@ window.addEventListener("keydown", function (event) {
 
 //Verificar se o jogador acertou a palavra
 function acertouPalavra(){
-    console.log(letrasCerta.length)
-    console.log(palavraSorteada.length)
     
     if(letrasCerta.length > 0 && letrasCerta.length == palavraSorteada.length){
         alert("Parabéns! Você acertou a palavra")
