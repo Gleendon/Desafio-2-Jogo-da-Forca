@@ -1,7 +1,7 @@
 //Variáveis
 let letrasTeclado =['A', 'B', 'Ç','C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'X', 'Y', 'W', 'Z']
 let bancoPalavras= ["CASA", "VERDE", "VIAJAR", "PRATOS", "AMOR", "MONTANHA", "PEDRA", "MULHER", "VIAJAR", "BRANCO", "LOUCO", "LARANJA", "MACACO", "NARIZ", "PRAIA", "AREIA", "FLORES"]
-var boneco = document.querySelector(".boneco")
+var boneco = document.querySelector(".telaJogar__conteudo___forca--imagem")
 let testeTelaJogar = false
 let testeAcertou = false
 
@@ -45,9 +45,9 @@ function desenharLinhas(){
     palavraSorteada = bancoPalavras[SortearPalavra()]
     for(var i = 0; i < palavraSorteada.length; i++){
         var qtdLetra = document.createElement("span");
-        qtdLetra.classList.add("palavras-certas")
+        qtdLetra.classList.add("telaJogar__conteudo___letraCerta")
         qtdLetra.setAttribute("id", "letra" + i)
-        document.querySelector('.secao-palavra-certa').appendChild(qtdLetra)
+        document.querySelector(".telaJogar__conteudo___palavraCerta").appendChild(qtdLetra)
     }
 }
 
@@ -133,7 +133,7 @@ function addLetraCerta(letraAcionada){
 function addLetraErrada(letraAcionada){
     let letraErrada = document.createElement("span");
     letraErrada.setAttribute("id", "letraErr")
-    document.querySelector('.palavras-erradas').appendChild(letraErrada)
+    document.querySelector('.telaJogar__conteudo___palavraErrada').appendChild(letraErrada)
     letraErrada.innerHTML = letraAcionada
 }
 
@@ -149,37 +149,38 @@ function novoJogo(){
 }
 
 function adicionarPalavra(){
-    var secao_inicial = document.querySelector(".secao-inicial")
-    secao_inicial.classList.remove("secao-inicial")
-    secao_inicial.classList.add("invisivel")
+    var secao_inicial = document.querySelector(".telaInicial")
+    secao_inicial.classList.remove("telaInicial")
+    secao_inicial.classList.add("telaInicial--invisivel")
 
-    var secao_adicionar = document.querySelector(".secao-invisivel")
-    secao_adicionar.classList.remove("secao-invisivel")
-    secao_adicionar.classList.add("secao-adicionar")
+    var secao_adicionar = document.querySelector(".telaAdicionarPalavra--invisivel")
+    secao_adicionar.classList.remove("telaAdicionarPalavra--invisivel")
+    secao_adicionar.classList.add("telaAdicionarPalavra")
 }
 function comecar(){
     testeTelaJogar = true
 
-    var secao_inicial = document.querySelector(".secao-inicial")
-    secao_inicial.classList.remove("secao-inicial")
-    secao_inicial.classList.add("invisivel")
+    var secao_inicial = document.querySelector(".telaInicial")
+    secao_inicial.classList.remove("telaInicial")
+    secao_inicial.classList.add("telaInicial--invisivel")
 
-    var secao_adicionar = document.querySelector(".secao-jogar-invisivel")
-    secao_adicionar.classList.remove("secao-jogar-invisivel")
-    secao_adicionar.classList.add("secao-jogar")
+    var secao_adicionar = document.querySelector(".telaJogar--invisivel")
+    secao_adicionar.classList.remove("telaJogar--invisivel")
+    secao_adicionar.classList.add("telaJogar")
 
     desenharLinhas()
 }
 
 function iniciar(){
     testeTelaJogar = true
-    var secao_inicial = document.querySelector(".secao-adicionar")
-    secao_inicial.classList.remove("secao-inicial")
-    secao_inicial.classList.add("invisivel")
+    
+    var secao_inicial = document.querySelector(".telaAdicionarPalavra")
+    secao_inicial.classList.remove("telaAdicionarPalavra")
+    secao_inicial.classList.add("telaAdicionarPalavra--invisivel")
 
-    var secao_adicionar = document.querySelector(".secao-jogar-invisivel")
-    secao_adicionar.classList.remove("secao-jogar-invisivel")
-    secao_adicionar.classList.add("secao-jogar")
+    var secao_adicionar = document.querySelector(".telaJogar--invisivel")
+    secao_adicionar.classList.remove("telaJogar--invisivel")
+    secao_adicionar.classList.add("telaJogar")
 
     desenharLinhas()
 }

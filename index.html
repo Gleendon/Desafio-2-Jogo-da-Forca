@@ -1,61 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/telaPrincipal.css">
+    <link rel="stylesheet" href="css/telaAdicionar.css">
+    <link rel="stylesheet" href="css/telaJogar.css">
     <title>Jogo da Forca</title>
 </head>
-<body>
-    <header>
-        <h1><img src="img/logo-alura.svg" alt="Logo da Alura, letra A com a cor azul."></h1>
+<body class="conteudo">
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">
+            <img class="cabecalho__titulo___imagem" src="img/logo-alura.svg" alt="Logo da Alura, letra A com a cor azul.">
+        </h1>
     </header>
 
-    <main>
-        <section class="secao-inicial">   
-            <button class="comecar" onclick="comecar()" id="comecar">Começar a Jogar</button>
-            <button class="adicionar" onclick="adicionarPalavra()" id="adicionar">Adicionar Palavra</button>
-        </section>
-
-        <section class="secao-invisivel">
-            <div>
-                <textarea name="novaPalavra" id="novaPalavra" class="novaPalavra" placeholder="Adicionar uma nova palavra..."></textarea>
-            </div>
-            <div class="msg-alerta">
-                <img src="img/alert.png" alt="">
-                <p>Max. de 8 letras</p>
-            </div>
-            <div>
-                <button class="salvarPalavra" onclick="salvarPalavra()" id="salvarPalavra">Salvar e Começar</button>
-                <button class="cancelar" onclick="cancelar()" id="cancelar">Cancelar</button>
+    <main class="conteudo__principal">
+        
+        <section class="telaInicial">   
+            <div class="telaInicial__conjunto">
+                <button class="telaInicial__conjunto___botao" id="comecar" onclick="comecar()">Começar a Jogar</button>
+                <button class="telaInicial__conjunto___botao" id="adicionarPalavra" onclick="adicionarPalavra()">Adicionar Palavra</button>
             </div>
         </section>
 
-        <section class="secao-jogar-invisivel">
-            <div class="secao-forca">
-                <img src="img/boneco/boneco1.png" alt="" class="boneco">
-            </div>
-           
-            <div class="secao-palavra-certa">
-            </div>
+        <section class="telaAdicionarPalavra--invisivel">
+            <div class="telaAdicionarPalavra__conteudo">
+                <div class="telaAdicionarPalavra__conteudo___area">
+                    <textarea class="telaAdicionarPalavra__conteudo___texto"name="novaPalavra" id="novaPalavra" placeholder="Adicionar nova palavra..."></textarea>
+                    <p class="telaAdicionarPalavra__conteudo___alerta"> <img class="telaAdicionarPalavra__conteudo___imagem"src="img/alert.png" alt=""> Max. de 8 letras</p>
+                </div>
                 
-            <div class="palavras-erradas">
+                <div class="telaAdicionarPalavra__conteudo___botoes">
+                    <button class="telaAdicionarPalavra__conteudo___botao" onclick="salvarPalavra()" id="salvarPalavra">Salvar e Começar</button>
+                    <button class="telaAdicionarPalavra__conteudo___botao" onclick="cancelar()" id="cancelar">Cancelar</button>
+                </div>
             </div>
-            
-            <div>
-                <button class="novoJogo" onclick="novoJogo()" id="novoJogo">Novo Jogo</button>
-                <button class="desistir" onclick="desistir()" id="desistir">Desistir</button>
+        </section>
+
+        <section class="telaJogar--invisivel">     
+            <div class="telaJogar__conteudo">
+                <div class="telaJogar__conteudo___forca">
+                    <img class="telaJogar__conteudo___forca--imagem" src="img/boneco/boneco1.png" alt="" >
+                </div>
+
+                <div class="telaJogar__conteudo___palavraCerta">
+                </div>
+                
+                <div class="telaJogar__conteudo___palavraErrada">
+                </div>
+                
+                <div class="telaJogar__conteudo___botoes">
+                    <button class="telaJogar__conteudo___botao" onclick="novoJogo()" id="novoJogo">Novo Jogo</button>
+                    <button class="telaJogar__conteudo___botao" onclick="desistir()" id="desistir">Desistir</button>
+                </div>
             </div>
 
         </section>
 
     </main>
 
-    <footer>
-        <p>Denvolvido por <a href="https://github.com/Gleendon" target="_blank">Gleendon</a></p>
-        <p>Desafio 2 - Alura Challenges</p>
+    <footer class="rodape">
+        <p class="rodape__texto___principal">Denvolvido por <a class="rodape__texto___principal--link" href="https://github.com/Gleendon" target="_blank">Gleendon</a></p>
+        <p class="rodape__texto___secundario">Desafio 2 - Alura Challenges</p>
     </footer>
 
     <script src="js/index.js"></script>
